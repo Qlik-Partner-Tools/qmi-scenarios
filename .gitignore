@@ -1,1 +1,4 @@
 .DS_Store
+qmi-*/.vagrant
+qmi-*/*.log
+binaries/*.exe

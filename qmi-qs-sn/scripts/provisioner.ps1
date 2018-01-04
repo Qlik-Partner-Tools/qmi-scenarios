@@ -2,8 +2,6 @@
 
 & c:\shared-content\scripts\modules\qs-getBinary.ps1
 
-& c:\shared-content\scripts\modules\q-AccessDatabaseEngine.ps1
-
 & c:\shared-content\scripts\modules\qs-initial-cfg.ps1
 
 & c:\shared-content\scripts\modules\qs-install.ps1
@@ -11,14 +9,6 @@
 & c:\shared-content\scripts\modules\qs-post-cfg.ps1
 
 & c:\shared-content\scripts\modules\qs-update.ps1
-
-& c:\shared-content\scripts\modules\q-WebConnectors.ps1
-
-& c:\shared-content\scripts\modules\qs-importData.ps1
-
-& c:\shared-content\scripts\modules\qs-dataMarket.ps1
-
-& c:\shared-content\scripts\modules\qs-geoAnalytics.ps1
 
 & c:\shared-content\scripts\modules\q-provisioned.ps1
 
