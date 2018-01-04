@@ -6,6 +6,10 @@ QMI Scenarios for Partners
 * Virtualbox
 * Vagrant
 
+## Repository dependencies
+* https://gitlab.com/qmi/qlik-automation-core
+It'll get resolved when executing **init-shared-content.sh**
+
 ## Get started
 * Open a terminal window
 * Initialise folder "shared-content" by executing the following
@@ -15,7 +19,7 @@ QMI Scenarios for Partners
 
 ```
 
-* Then update Qlik license information in file --./shared-content/licenses/qlik-license.json--
+* Then update Qlik license information in file **./shared-content/licenses/qlik-license.json**
 
 * Enter the folder for one of the available scenarios, ie: qmi-qs-sn, and run the vagrant script to provision
 ```
