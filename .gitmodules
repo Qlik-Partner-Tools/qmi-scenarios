@@ -1,3 +1,0 @@
-[submodule "core-automation"]
-	path = core-automation
-	url = git@gitlab.com:qmi/qmi-core-automation.git
