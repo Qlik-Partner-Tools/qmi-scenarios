@@ -1,0 +1,3 @@
+[submodule "shared-content"]
+	path = shared-content
+	url = git@gitlab.com:qmi/qmi-core-automation.git
