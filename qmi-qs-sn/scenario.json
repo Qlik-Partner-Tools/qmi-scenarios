@@ -1,0 +1,43 @@
+{
+    "name": "qmi-qs-sn",
+    "description": "Qlik Sense single node",
+    "category": "Qlik Sense",
+    "plugin-dependencies": [],
+    "notes": "Requires Qlik Sense >= 3.1 SR2 <br>GeoAnalytics and Web Connectors Installed.",
+    "version": 1.0,
+    "author": "Clint Carr",
+    "email": "clint.carr@qlik.com",
+    "disabled": false,
+    "resources": [{
+            "name": "QMC",
+            "url": "http://qmi-qs-sn/qmc"
+        },
+        {
+            "name": "Hub",
+            "url": "http://qmi-qs-sn/hub"
+        },
+        {
+            "name": "Web Connectors",
+            "url": "http://qmi-qs-sn:5555/web"
+        },
+        {
+            "name": "User name / password",
+            "value": ".\\qlik / Qlik1234"
+        }
+    ],
+    "config": {
+    	"allowUpdates": true,
+        "servers": [{
+            "name": "qmi-qs-sn",
+            "ip": "192.168.56.6",
+            "box": "qlik/win2k16",
+            "memory": 4096,
+            "cpus": 2,
+            "sense": {
+                "central": true,
+                "proxy": true,
+                "persistence": "shared"
+            }
+        }]
+    }
+}

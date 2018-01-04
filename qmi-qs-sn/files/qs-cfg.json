@@ -1,0 +1,7 @@
+{
+  "sense": {
+    "serviceAccount": "qservice",
+    "serviceAccountPass": "Qlik1234",
+    "PostgresAccountPass": "Qlik1234"
+  }
+}
