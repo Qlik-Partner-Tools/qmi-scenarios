@@ -2,3 +2,4 @@
 qmi-*/.vagrant
 qmi-*/*.log
 binaries/*.exe
+qmi-*/files/log*.txt
