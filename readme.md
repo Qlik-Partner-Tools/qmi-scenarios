@@ -12,11 +12,6 @@ QMI Scenarios for Partners
 
 It'll get resolved when executing **init-shared-content.sh**
 
-## Repository dependencies
-* https://gitlab.com/qmi/qlik-automation-core
-
-It'll get resolved when executing **init-shared-content.sh**
-
 ## Get started
 * Open a terminal window
 * Initialise folder "shared-content" by executing the following
