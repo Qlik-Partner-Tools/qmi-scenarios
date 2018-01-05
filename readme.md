@@ -28,7 +28,7 @@ Windows
 ```
 
 * Then update Qlik license information in file *./shared-content/licenses/qlik-license.json* (only for the products your scenarios are built for)
-```
+```json
 {
   "sense": {
     "name": "ENTER_NAME_HERE",
