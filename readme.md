@@ -28,35 +28,36 @@ Windows
 ```
 
 * Then update Qlik license information in file *./shared-content/licenses/qlik-license.json* (only for the products your scenarios are built for)
+
 ```json
 {
-  "sense": {
-    "name": "ENTER_NAME_HERE",
-    "control": "ENTER_CONTROL_CODE_HERE",
-    "serial": "ENTER_SERIAL_CODE_HERE",
-    "organization": "ENTER_YOUR_ORG_NAME_HERE",
-    "lef": "QLIKSENSE_LEF_STRING_GOES_HERE"
-  },
-  "qap": {
-    "name": "ENTER_NAME_HERE",
-    "control": "ENTER_CONTROL_CODE_HERE",
-    "serial": "ENTER_SERIAL_CODE_HERE",
-    "organization": "ENTER_YOUR_ORG_NAME_HERE"
-  },
-  "qlikview": {
-    "name": "ENTER_NAME_HERE",
-    "control": "ENTER_CONTROL_CODE_HERE",
-    "serial": "ENTER_SERIAL_CODE_HERE",
-    "organization": "ENTER_YOUR_ORG_NAME_HERE"
-  },
-  "datamarket": {
-    "name": "ENTER_NAME_HERE",
-    "control" : "ENTER_CONTROL_CODE_HERE",
-    "serial": "ENTER_SERIAL_CODE_HERE",
-    "termsAcceptance": {},
-    "organization": "ENTER_YOUR_ORG_NAME_HERE",
-    "lef": "DATAMARKET_LEF_STRING_GOES_HERE"
-  }
+    "sense": {
+        "name": "ENTER_NAME_HERE",
+        "control": "ENTER_CONTROL_CODE_HERE",
+        "serial": "ENTER_SERIAL_CODE_HERE",
+        "organization": "ENTER_YOUR_ORG_NAME_HERE",
+        "lef": "QLIKSENSE_LEF_STRING_GOES_HERE"
+    },
+    "qap": {
+        "name": "ENTER_NAME_HERE",
+        "control": "ENTER_CONTROL_CODE_HERE",
+        "serial": "ENTER_SERIAL_CODE_HERE",
+        "organization": "ENTER_YOUR_ORG_NAME_HERE"
+    },
+    "qlikview": {
+        "name": "ENTER_NAME_HERE",
+        "control": "ENTER_CONTROL_CODE_HERE",
+        "serial": "ENTER_SERIAL_CODE_HERE",
+        "organization": "ENTER_YOUR_ORG_NAME_HERE"
+    },
+    "datamarket": {
+        "name": "ENTER_NAME_HERE",
+        "control" : "ENTER_CONTROL_CODE_HERE",
+        "serial": "ENTER_SERIAL_CODE_HERE",
+        "termsAcceptance": {},
+        "organization": "ENTER_YOUR_ORG_NAME_HERE",
+        "lef": "DATAMARKET_LEF_STRING_GOES_HERE"
+    }
 }
 ```
 
