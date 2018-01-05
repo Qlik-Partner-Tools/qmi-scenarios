@@ -62,10 +62,9 @@ Windows
 ```
 
 * Enter the folder for one of the available scenarios, ie: qmi-qs-sn, and run the vagrant script to provision
+
 ```
 cd qmi-qs-sn
-```
-```
 vagrant up
 ```
 
