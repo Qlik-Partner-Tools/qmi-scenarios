@@ -11,7 +11,6 @@ Qlik Sense single server
 |------|-----|---------
 |QMC|http://qmi-qs-sn/qmc | QMC
 |hub|http://qmi-qs-sn/hub | hub
-|Web Connectors|http://qmi-qs-sn:5555/web | Web Connectors
 
 ## Users
 | Name | Password |
@@ -19,15 +18,11 @@ Qlik Sense single server
 |.\qlik| Qlik1234|
 
 ## Purpose
-This scenario is a basic installation of Qlik Sense with GeoAnalytics.
+This scenario is a basic installation of Qlik Sense.
 
 ## What is installed
 ### Software
 1. Qlik Sense Server
-2. GeoAnalytics Base 5.8.1
-3. GeoAnalytics Plus 1.7.0
-4. Qlik Web Connectors
-5. Microsoft Access Database Engine 2016
 
 ### Support Information
 | Author | Version | Date Published |
