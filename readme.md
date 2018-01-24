@@ -1,4 +1,4 @@
-# qmi-scenarios-ext
+# qmi-scenarios
 
 QMI Scenarios for Partners
 
