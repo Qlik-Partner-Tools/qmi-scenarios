@@ -8,7 +8,7 @@ QMI Scenarios for Partners
 * Git
 
 ## Repository dependencies
-* https://gitlab.com/qmi/qlik-automation-core
+* https://github.com/Qlik-Partner-Tools/qlik-automation-core.git
 
 It'll get resolved when executing script **init-shared-content**
 
