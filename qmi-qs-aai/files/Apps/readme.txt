@@ -1,0 +1,1 @@
+Place Qlik Sense applications you want to be automatically provisioned into this folder.

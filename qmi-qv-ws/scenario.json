@@ -1,0 +1,30 @@
+{
+	"name": "qmi-qv-ws",
+	"description": "QlikView Server & Publisher",
+	"category": "QlikView",
+	"plugin-dependencies": ["reload", "vagrant-reload"],
+	"notes": "QlikView installed with QlikView Web Server",
+	"version": 1.0,
+	"author": "Clint Carr",
+	"email": "clint.carr@qlik.com",
+	"disabled": false,
+	"resources": [{
+			"name": "QMC",
+			"url": "http://qmi-qv-ws:4780/QMC/default.htm"
+		},
+		{
+			"name": "AccessPoint",
+			"url": "http://qmi-qv-ws/qlikview"
+		}
+	],
+	"config": {
+    	"allowUpdates": true,
+        "servers": [{
+            "name": "qmi-qv-ws",
+            "ip": "192.168.56.4",
+            "box": "qlik/win2k16",
+            "memory": 4096,
+            "cpus": 2
+        }]
+    }
+}

@@ -1,0 +1,1 @@
+Add QlikView Server installer to this folder

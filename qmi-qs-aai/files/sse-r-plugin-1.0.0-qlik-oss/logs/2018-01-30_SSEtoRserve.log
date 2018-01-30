@@ -1,0 +1,36 @@
+2018-01-30 13:32:02.9631 INFO No certificates defined. Opening insecure channel. 
+2018-01-30 13:32:03.0093 INFO Connected to RServe 127.0.0.1:6311 
+2018-01-30 13:32:03.7283 INFO gRPC listening on port 50051 
+2018-01-30 13:32:18.6341 INFO GetCapabilities called, returned (Qlik SSEtoRserve plugin), version (v1.0.0) 
+2018-01-30 15:02:45.1244 INFO No certificates defined. Opening insecure channel. 
+2018-01-30 15:02:45.1707 INFO Connected to RServe 127.0.0.1:6311 
+2018-01-30 15:02:45.9207 INFO gRPC listening on port 50051 
+2018-01-30 15:02:57.6707 INFO GetCapabilities called, returned (Qlik SSEtoRserve plugin), version (v1.0.0) 
+2018-01-30 15:21:06.7630 INFO Evaluating paste(q$firstWord, q$secondWord); 
+2018-01-30 15:21:06.7786 INFO Param names:  firstWord secondWord 
+2018-01-30 15:21:07.6689 INFO Rserve result: 1 rows 
+2018-01-30 15:21:07.6845 DEBUG Took 911 ms 
+2018-01-30 15:21:19.2319 INFO Evaluating library("TTR");
+data <- data.frame(Close = q$Close, High = q$High, Low = q$Low);
+bands <- BBands(data,sd=2.0);
+bands[,"mavg"];
+ 
+2018-01-30 15:21:19.2319 INFO Param names:  Close High Low 
+2018-01-30 15:21:20.4351 INFO Rserve result: 5082 rows 
+2018-01-30 15:21:20.4351 DEBUG Took 1211 ms 
+2018-01-30 15:21:20.4509 INFO Evaluating library("TTR");
+data <- data.frame(Close = q$Close, High = q$High, Low = q$Low);
+bands <- BBands(data,sd=2.0);
+bands[,"up"];
+ 
+2018-01-30 15:21:20.5284 INFO Param names:  Close High Low 
+2018-01-30 15:21:21.2160 INFO Rserve result: 5082 rows 
+2018-01-30 15:21:21.2320 DEBUG Took 785 ms 
+2018-01-30 15:21:21.2320 INFO Evaluating library("TTR");
+data <- data.frame(Close = q$Close, High = q$High, Low = q$Low);
+bands <- BBands(data,sd=2.0);
+bands[,"dn"];
+ 
+2018-01-30 15:21:21.2947 INFO Param names:  Close High Low 
+2018-01-30 15:21:21.6223 INFO Rserve result: 5082 rows 
+2018-01-30 15:21:21.6386 DEBUG Took 396 ms 

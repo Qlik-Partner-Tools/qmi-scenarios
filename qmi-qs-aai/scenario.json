@@ -1,0 +1,43 @@
+{
+    "name": "qmi-qs-aai",
+    "description": "Qlik Sense with Advanced Analytics Integration pre-configured (R and Python)",
+    "category": "Qlik Sense",
+    "plugin-dependencies": [],
+    "notes": "Qlik Sense June 2017 later required!<br>GeoAnalytics and Web Connectors Installed.",
+    "version": 2.0,
+    "author": "Clint Carr",
+    "email": "clint.carr@qlik.com",
+    "disabled": false,
+    "resources": [{
+            "name": "QMC",
+            "url": "http://qmi-qs-aai/qmc"
+        },
+        {
+            "name": "Hub",
+            "url": "http://qmi-qs-aai/hub"
+        },
+        {
+            "name": "Web Connectors",
+            "url": "http://qmi-qs-aai:5555/web"
+        },
+        {
+            "name": "User name / password",
+            "value": ".\\qlik / Qlik1234"
+        }
+    ],
+    "config": {
+        "allowUpdates": true,
+        "servers": [{
+            "name": "qmi-qs-aai",
+            "ip": "192.168.56.7",
+            "box": "qlik/win2k16",
+            "memory": 4096,
+            "cpus": 2,
+            "sense": {
+                "central": true,
+                "proxy": true,
+                "persistence": "shared"
+            }
+        }]
+    }
+}

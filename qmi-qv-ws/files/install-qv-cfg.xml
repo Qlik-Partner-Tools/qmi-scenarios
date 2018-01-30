@@ -1,0 +1,6 @@
+<config>
+   <serviceAccount>qservice</serviceAccount>
+   <serviceAccountPass>Qlik1234</serviceAccountPass>
+   <hostname>qmi-qv-ws</hostname>
+   <webServer>qvws</webServer>
+</config>
