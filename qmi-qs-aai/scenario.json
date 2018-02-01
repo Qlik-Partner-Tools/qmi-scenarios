@@ -8,6 +8,7 @@
     "author": "Clint Carr",
     "email": "clint.carr@qlik.com",
     "disabled": false,
+    "qlik-default-binary": "Qlik Sense November 2017 Patch 1",
     "resources": [{
             "name": "QMC",
             "url": "http://qmi-qs-aai/qmc"

@@ -8,6 +8,7 @@
 	"author": "Clint Carr",
 	"email": "clint.carr@qlik.com",
 	"disabled": false,
+	"qlik-default-binary": "QlikView Server November 2017",
 	"resources": [{
 			"name": "QMC",
 			"url": "http://qmi-qv-ws:4780/QMC/default.htm"
