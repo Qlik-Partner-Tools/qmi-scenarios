@@ -7,23 +7,21 @@ Vagrant.require_version ">= 1.6.2"
 sharedContentRelativePath = '../shared-content'
 
 require 'json'
-# Module dependency for custom VM values setup
-require File.dirname(__FILE__) + '/' + sharedContentRelativePath + '/scripts/custom-setup.rb'
 
 # Load scenario data configuration file
 scenario = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'scenario.json')))
-# Overwrite of VM values (cpus, memory) from custom values setup in QMI client
-vals = CustomSetup.getValues( scenario )["servers"][0]
-
+vals = scenario['config']['servers'][0]
 
 # Vagrant intialization
 Vagrant.configure("2") do |config|
 
     config.vm.define vals["name"]
     config.vm.box = vals["box"]
+
     config.vm.network "private_network", ip: vals["ip"]
     config.vm.hostname = vals["name"]
 
+    # Virtual Machine details
     config.vm.provider :virtualbox do |v, override|
         v.name = vals["name"]
         v.linked_clone = true
