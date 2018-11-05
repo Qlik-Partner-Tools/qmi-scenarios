@@ -3,8 +3,8 @@
 QMI Scenarios for Partners
 
 ## Requirements
-* Virtualbox
-* Vagrant
+* Virtualbox 5.2.x +
+* Vagrant 2.1.2 +
 * Git
 
 ## Repository dependencies
