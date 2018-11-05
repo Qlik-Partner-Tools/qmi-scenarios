@@ -13,16 +13,24 @@ QMI Scenarios for Partners
 It'll get resolved when executing script **init-shared-content**
 
 ## Get started
-* Open a terminal window
-* Initialise folder "shared-content" by executing the following
+* Open a terminal window and checkout clone this repository
+
+```
+git clone https://github.com/Qlik-Partner-Tools/qmi-scenarios.git
+
+```
+
+* Enter qmi-scenarios folder and initialise folder "shared-content"
 
 Linux and OSX
 ```
+cd qmi-scenarios
 ./init-shared-content.sh
 
 ```
 Windows
 ```
+cd qmi-scenarios
 ./init-shared-content.bat
 
 ```
