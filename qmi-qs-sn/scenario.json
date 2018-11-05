@@ -18,10 +18,6 @@
             "url": "http://qmi-qs-sn/hub"
         },
         {
-            "name": "Web Connectors",
-            "url": "http://qmi-qs-sn:5555/web"
-        },
-        {
             "name": "User name / password",
             "value": ".\\qlik / Qlik1234"
         }

@@ -13,6 +13,6 @@
   <InstallLocalDb>true</InstallLocalDb>
   <ConfigureDbListener>true</ConfigureDbListener>
   <ListenAddresses>*</ListenAddresses>
-  <IpRange>0.0.0.0/0</IpRange>
+  <IpRange>0.0.0.0/0,::0/0</IpRange>
   <!--<JoinCluster>true</JoinCluster>-->
 </SharedPersistenceConfiguration>
