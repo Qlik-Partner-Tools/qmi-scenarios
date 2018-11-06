@@ -69,7 +69,7 @@ cd qmi-scenarios
 }
 ```
 
-* Enter the folder for one of the available scenarios, ie: qmi-qs-sn, and run the vagrant script to provision
+* Enter the folder for one of the available scenarios, ie: qmi-qs-sn, and run the vagrant command to provision
 
 ```
 cd qmi-qs-sn
