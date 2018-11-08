@@ -10,6 +10,8 @@
 
 & c:\shared-content\scripts\modules\qs-installR.ps1
 
+& c:\shared-content\scripts\modules\qs-install-python.ps1
+
 & c:\shared-content\scripts\modules\qs-update.ps1
 
 & c:\shared-content\scripts\modules\q-provisioned.ps1
