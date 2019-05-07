@@ -1,0 +1,65 @@
+identity-providers:
+  secrets:
+    idpConfigs:
+      - discoveryUrl: "https://arcane-brook-10328.herokuapp.com/.well-known/openid-configuration"
+        clientId: "foo"
+        clientSecret: "bar"
+        realm: "simple"
+        hostname: "qmi-qseok-minikube"
+        claimsMapping:
+          sub: ["sub", "client_id"]
+          
+edge-auth:
+  oidc:
+    redirectUri: https://qmi-qseok-minikube:32443/login/callback
+
+elastic-infra:
+  nginx-ingress:
+    controller:
+      service:
+        type: NodePort
+        nodePorts:
+          https: 32443
+      extraArgs.report-node-internal-ip-address: ""
+
+hub:
+  ingress:
+    annotations:
+      nginx.ingress.kubernetes.io/auth-signin: https://$host:32443/login?returnto=$request_uri
+
+management-console:
+ ingress:
+   annotations:
+     nginx.ingress.kubernetes.io/auth-signin: https://$host:32443/login?returnto=$request_uri
+
+# Mongo____________________________________  
+mongodb:
+  #uri: "mongodb://qlik:Qlik1234@qmimongo-mongodb.default.svc.cluster.local:27017/qsefe" 
+  persistence:
+    enabled: true
+    existingClaim: pvc-mongo  
+
+# Storage settings____________________________________  
+engine:
+  acceptEULA: "yes"
+  persistence:
+    enabled: true
+    accessMode: ReadWriteMany
+    existingClaim: pvc-engine  
+redis:
+  persistence:
+    enabled: true
+    accessMode: ReadWriteMany
+    existingClaim: pvc-redis
+resource-library:
+  persistence:
+    enabled: true
+    accessMode: ReadWriteMany
+    existingClaim: pvc-library
+reporting:
+  persistence:
+    enabled: true
+    accessMode: ReadWriteMany
+    existingClaim: pvc-reporting
+
+

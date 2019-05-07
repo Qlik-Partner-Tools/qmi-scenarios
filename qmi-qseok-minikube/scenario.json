@@ -1,0 +1,32 @@
+{
+    "name": "qmi-qseok-minikube",
+    "description": "QSEoK with Auth0 Idp, MongoDB and Persistence",
+    "category": "Common",
+    "plugin-dependencies": [],
+    "notes": "This scenario provisions a local Qlik Sense Enterprise on Kubernetes for Minikube.<br>Uses Auth0 IdP for authentication, custom MongoDB and Persistence.<br><br>Review scenario info for QSEfW setup.",
+    "version": 2.0,
+    "author": "Manuel Romero",
+    "email": "manuel.romero@qlik.com",
+    "isNew": true,
+    "disabled": false,
+    "custom": true,
+    "resources": [
+        {
+            "name": "QSEoK Hub",
+            "url": "https://qmi-qseok-minikube:32443"
+        }, {
+            "name": "QSEoK Console",
+            "url": "https://qmi-qseok-minikube:32443/console"
+        }
+    ],
+    "config": {
+    	"allowUpdates": true,
+        "servers": [{
+            "name": "qmi-qseok-minikube",
+            "ip": "192.168.56.120",
+            "box": "bento/ubuntu-16.04",
+            "memory": 6144,
+            "cpus": 2
+        }]
+    }
+}
