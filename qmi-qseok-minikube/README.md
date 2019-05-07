@@ -55,8 +55,13 @@ This scenario provisions the latest stable release of Qlik Sense Enterprise on K
 |QSEoK API license assignments|[https://qmi-qseok-minikube:32443/api/v1/licenses/assignments](https://qmi-qseok-minikube:32443/api/v1/licenses/assignments)|
 |QSEoK API current logged-in user|[https://qmi-qseok-minikube:32443/api/v1/users/me](https://qmi-qseok-minikube:32443/api/v1/users/me)|
 
-## Available Users in Auth0
-The following table outlines users that have been created and can be used within the QSEfE hub and QSEfW through SAML.
+## Authenticaion: Simple OIDC
+For a quick setup and demo reasons, a Simple OIDC provider has been deployed into Heroku and is used as the Identity Provider for QSEoK Authentication.
+
+For more reference please follow this link: https://hub.docker.com/r/qlik/simple-oidc-provider/
+
+
+The following table outlines users that have been created and can be used to access the QSEoK hub.
 
 | User | Password | Groups |
 |------|----------|--------|
