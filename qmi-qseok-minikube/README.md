@@ -1,13 +1,33 @@
 # Qlik Sense Enterprise on Kubernetes (Minikube)
 ## Description
-A local demonstration environment for showing the benefits of Qlik Sense Enterprise on Kubernetes. A custom MongoDB is used for storage and Persistence is setup for mayor container (mongo, redis, engine, library)
+A local demonstration environment for showing the benefits of Qlik Sense Enterprise on Kubernetes. 
+
+Vagrant is used to provision this enviroment. Enviroment parameters are:
+- Base box: bento/ubuntu-16.04
+- RAM: 6Gb
+- IP: 192.168.56.120
+- Hostname: qmi-qseok-minikube
+- Linux Users: vagrant (password: vagrant)
 
 | Servername        | Server IP         | Purpose | 
 |-------------------|-------------------|---------|
 | qmi-qseok-minikube | 192.168.56.120   | Qlik Sense Enterprise on Kubernetes |
 
+## Purpose
+This scenario provisions the latest stable release of Qlik Sense Enterprise on Kubernetes build in a Minikube provisionined K8s cluster. 
+
+### What is installed
+#### Software
+1. Ubuntu 16.04
+2. Docker CE
+3. Docker Compose and Docker Machine
+4. Minikube (Kubernetes)
+5. Helm (package manager for Kubernetes)
+6. Qlik Sense Enterprise on Kubernetes (QSEoK) from "stable" Bintray repository.
+
+
 ## Hosts file
-It is recommended that you add the following to both your laptops HOSTS file 
+Add the following to  your laptop's HOSTS file
 
 ```
 192.168.56.120 qmi-qseok-minikube
@@ -15,43 +35,26 @@ It is recommended that you add the following to both your laptops HOSTS file
 
 And to any Qlik Sense Enterprise for Windows servers that will distribute content.
 
-The hosts file is found here: c:\windows\system32\drivers\etc
-
-## Linux Users
-| Name | Password |
-|------|-----|
-|vagrant|vagrant|
-
+The hosts file is found here usually found in c:\windows\system32\drivers\etc
 
 ## Connection
-Please use __vagrant ssh__ to connect to the server (or if using your own SSH use ssh vagrant@elastic.example to connect (password: vagrant))
+Please use __vagrant ssh__ to connect to the server (or if using your own SSH use ssh vagrant@qmi-qseok-minikube to connect (password: vagrant)).
 
-You can monitor PODs by executing 
+After provision has finished successfully enter the server and monitor Kubernetes PODs by executing. 
 
 ```
 kubectl get pod -w
 ```
 
+All PODS should end up running after a few minutes, then you can go to "QSEoK hub". And set your license in the "QSEoK admin tenant console".
 
-## Purpose
-This scenario provisions the latest stable release of Qlik Sense Enterprise on Kubernetes build in a Minikube provisionined K8s cluster. Custom MongoDB and Persistence is enabled.
-
-
-## What is installed
-### Software
-1. Ubuntu Xenial 16.04
-2. Docker CE
-3. Docker Compose
-4. Minikube (Kubernetes)
-5. Helm
-6. Qlik Sense Enterprise on Kubernetes (QSEoK) from "stable" Bintray repository.
 
 ## URLs
 
 | Name | URL |
 |------|-----|
 |QSEoK hub|[https://qmi-qseok-minikube:32443](https://qmi-qseok-minikube:32443)|
-|QSEoK console|[https://qmi-qseok-minikube:32443/console](https://qmi-qseok-minikube:32443/console)|
+|QSEoK Admin tenant console|[https://qmi-qseok-minikube:32443/console](https://qmi-qseok-minikube:32443/console)|
 |QSEoK API license assignments|[https://qmi-qseok-minikube:32443/api/v1/licenses/assignments](https://qmi-qseok-minikube:32443/api/v1/licenses/assignments)|
 |QSEoK API current logged-in user|[https://qmi-qseok-minikube:32443/api/v1/users/me](https://qmi-qseok-minikube:32443/api/v1/users/me)|
 
@@ -61,7 +64,7 @@ For a quick setup and demo reasons, a Simple OIDC provider has been deployed int
 For more reference please follow this link: https://hub.docker.com/r/qlik/simple-oidc-provider/
 
 
-The following table outlines users that have been created and can be used to access the QSEoK hub.
+The following table outlines users that can be used to access the QSEoK hub.
 
 | User | Password | Groups |
 |------|----------|--------|
@@ -76,9 +79,3 @@ The following table outlines users that have been created and can be used to acc
 |evan@qlik.example|Password1!|Everyone, Engineering|
 |franklin@qlik.example|Password1!|Everyone, Sales|
 
-
-
-## Support Information
-| Author | Version | Date Published |
-|--------|---------|----------------|
-|Manuel Romero|2.0|29 April 2019|

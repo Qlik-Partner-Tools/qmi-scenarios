@@ -25,7 +25,7 @@ kubectl apply -f /vagrant/files/pvc.yaml
 sleep 10
 
 #echo "--- Install Custom MongoDB"
-#helm install -n qmimongo stable/mongodb -f /vagrant/files/mongo-values.yaml
+#helm install -n qmimongo stable/mongodb -f /vagrant/files/values-mongo.yaml
 #-----------
 
 sleep 10
@@ -34,4 +34,4 @@ echo '--- Qlik Sense INIT - Custom Resource Definition'
 helm install -n qliksense-init qlik-stable/qliksense-init
 
 echo '---  Installing QlikSense from Stable repo'
-helm install -n qliksense qlik-stable/qliksense --set devMode.enabled=true,engine.acceptEULA="yes" -f /vagrant/files/values.yaml 
+helm install -n qliksense qlik-stable/qliksense --set devMode.enabled=true,engine.acceptEULA="yes" -f /vagrant/files/values-minikube.yaml 
