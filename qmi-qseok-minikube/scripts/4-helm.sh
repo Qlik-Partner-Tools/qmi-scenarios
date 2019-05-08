@@ -4,7 +4,7 @@ helm init --wait --upgrade
 echo 'adding qlik-stable helm repo'
 helm repo add qlik-stable https://qlik.bintray.com/stable
 
-helm reop update
+helm repo update
 #----------
 echo "--- Create QMI StorageClass"
 hostname=`hostname`
