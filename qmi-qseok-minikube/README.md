@@ -40,13 +40,13 @@ The hosts file is found here usually found in c:\windows\system32\drivers\etc
 ## Connection
 Please use __vagrant ssh__ to connect to the server (or if using your own SSH use ssh vagrant@qmi-qseok-minikube to connect (password: vagrant)).
 
-After provision has finished successfully enter the server and monitor Kubernetes PODs by executing. 
+After provision has finished successfully enter the server (vagrant ssh) and monitor Kubernetes PODs by executing. 
 
 ```
 kubectl get pod -w
 ```
 
-All PODS should end up running after a few minutes, then you can go to "QSEoK hub". And set your license in the "QSEoK admin tenant console".
+All PODS should end up running after a few minutes (~10-15 minutes), then you can go to "QSEoK hub". And set your license in the "QSEoK admin tenant console".
 
 
 ## URLs

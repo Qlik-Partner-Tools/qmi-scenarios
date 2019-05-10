@@ -19,8 +19,8 @@ EOF'
 helm install -n qmi stable/nfs-client-provisioner -f /home/vagrant/qmiStorageClass.yaml
 #----------
 
-echo "--- Create Persistent Volume Claims for storage"
-kubectl apply -f /vagrant/files/pvc.yaml
+#echo "--- Create Persistent Volume Claims for storage"
+kubectl apply -f /vagrant/files/pvc-mongo.yaml
 
 sleep 10
 
@@ -34,4 +34,4 @@ echo '--- Qlik Sense INIT - Custom Resource Definition'
 helm install -n qliksense-init qlik-stable/qliksense-init
 
 echo '---  Installing QlikSense from Stable repo'
-helm install -n qliksense qlik-stable/qliksense --set devMode.enabled=true,engine.acceptEULA="yes" -f /vagrant/files/values-minikube.yaml 
+helm install -n qliksense qlik-stable/qliksense -f /vagrant/files/values-minikube.yaml 

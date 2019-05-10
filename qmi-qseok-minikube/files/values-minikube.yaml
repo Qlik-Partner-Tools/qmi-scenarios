@@ -1,3 +1,8 @@
+devMode:
+  enabled: true
+engine:
+  acceptEULA: "yes"
+
 # Indentity Provider configuration. Using Simple OIDC deployed in Heroku
 identity-providers:
   secrets:
@@ -10,12 +15,14 @@ identity-providers:
         claimsMapping:
           sub: ["sub", "client_id"]
 
-#
 # --- This configuration is specific for Minikube. 
 #
 # --- Look at official documentation if deploying into 
 #     Azure AKS, AWS EKS, Google or RedHat Openshift
-#
+global:
+  persistence:
+    storageClass: "qmistorage"
+
 edge-auth:
   oidc:
     redirectUri: https://qmi-qseok-minikube:32443/login/callback
@@ -39,32 +46,11 @@ management-console:
    annotations:
      nginx.ingress.kubernetes.io/auth-signin: https://$host:32443/login?returnto=$request_uri
 
-# Storage settings
+
+# Storage settings for mongo
 mongodb:
   #uri: "mongodb://qlik:Qlik1234@qmimongo-mongodb.default.svc.cluster.local:27017/qsefe" 
   persistence:
+    accessMode: ReadWriteOnce
     enabled: true
-    existingClaim: pvc-mongo  
-engine:
-  acceptEULA: "yes"
-  persistence:
-    enabled: true
-    accessMode: ReadWriteMany
-    existingClaim: pvc-engine  
-redis:
-  persistence:
-    enabled: true
-    accessMode: ReadWriteMany
-    existingClaim: pvc-redis
-resource-library:
-  persistence:
-    enabled: true
-    accessMode: ReadWriteMany
-    existingClaim: pvc-library
-reporting:
-  persistence:
-    enabled: true
-    accessMode: ReadWriteMany
-    existingClaim: pvc-reporting
-
-
+    existingClaim: pvc-mongo

@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-mongo
+  annotations:
+    volume.beta.kubernetes.io/storage-class: qmistorage
+spec:
+  storageClassName: qmistorage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
