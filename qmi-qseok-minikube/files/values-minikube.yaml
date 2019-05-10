@@ -51,6 +51,5 @@ management-console:
 mongodb:
   #uri: "mongodb://qlik:Qlik1234@qmimongo-mongodb.default.svc.cluster.local:27017/qsefe" 
   persistence:
-    accessMode: ReadWriteOnce
     enabled: true
     existingClaim: pvc-mongo

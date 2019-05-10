@@ -19,7 +19,7 @@ EOF'
 helm install -n qmi stable/nfs-client-provisioner -f /home/vagrant/qmiStorageClass.yaml
 #----------
 
-#echo "--- Create Persistent Volume Claims for storage"
+echo "--- Create Persistent Volume Claims for storage"
 kubectl apply -f /vagrant/files/pvc-mongo.yaml
 
 sleep 10
