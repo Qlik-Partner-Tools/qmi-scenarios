@@ -26,9 +26,8 @@ sleep 10
 
 #echo "--- Install Custom MongoDB"
 #helm install -n qmimongo stable/mongodb -f /vagrant/files/values-mongo.yaml
+#sleep 10
 #-----------
-
-sleep 10
 
 echo '--- Qlik Sense INIT - Custom Resource Definition'
 helm install -n qliksense-init qlik-stable/qliksense-init
