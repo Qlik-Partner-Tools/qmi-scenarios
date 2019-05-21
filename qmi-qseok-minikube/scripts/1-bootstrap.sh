@@ -20,3 +20,6 @@ sudo bash -c 'cat << EOF >>/etc/exports
 EOF'
 
 sudo service nfs-kernel-server restart
+
+echo '--- Adding DNS server (Google)'
+sudo  sed -i '1s/^/nameserver 8.8.8.8 /' /etc/resolv.conf
