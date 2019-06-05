@@ -19,10 +19,10 @@ This scenario provisions the latest stable release of Qlik Sense Enterprise on K
 ### What is installed
 #### Software
 1. Ubuntu 16.04
-2. Docker CE
-3. Docker Compose and Docker Machine
-4. Minikube (Kubernetes)
-5. Helm (package manager for Kubernetes)
+2. Docker CE v18.06.0
+3. Docker Compose (1.23.1) and Docker Machine (v0.16.0)
+4. Minikube v1.0.1 with Kubernetes v1.14.0
+5. Helm v2.13.1 (package manager for Kubernetes)
 6. Qlik Sense Enterprise on Kubernetes (QSEoK) from "stable" Bintray repository.
 
 
