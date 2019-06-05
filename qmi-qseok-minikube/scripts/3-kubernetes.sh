@@ -9,7 +9,7 @@ EOF
 apt-get update -y -qq
 apt-get install -y kubectl kubeadm kubelet > /dev/null 2>&1
 
-sudo curl -s -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo curl -s -Lo minikube https://storage.googleapis.com/minikube/releases/v1.0.1/minikube-linux-amd64
 sudo chmod +x minikube
 sudo mv minikube /usr/local/bin/
  
@@ -40,7 +40,7 @@ mkdir /home/vagrant/.kube || true
 touch /home/vagrant/.kube/config
 
 echo '--- Starting minikube local cluster'
-minikube start --memory 6144 --cpus=2 --vm-driver=none
+minikube start --kubernetes-version v1.14.0 --memory 6144 --cpus=2 --vm-driver=none
 
 echo '--- Vagrant user to run kubectl and minikube commands'
 sudo chown -R vagrant /home/vagrant/.kube
