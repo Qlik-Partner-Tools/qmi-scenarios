@@ -5,19 +5,11 @@ echo 'adding qlik-stable helm repo'
 helm repo add qlik-stable https://qlik.bintray.com/stable
 
 helm repo update
-#----------
-echo "--- Create QMI StorageClass"
-hostname=`hostname`
-sudo -u vagrant bash -c 'cat << EOF > /home/vagrant/qmiStorageClass.yaml
-nfs:
-  path: /data/k8s
-  server: '"$hostname"'
-storageClass:
-  name: qmistorage
-EOF'
 
-helm install -n qmi stable/nfs-client-provisioner -f /home/vagrant/qmiStorageClass.yaml
-#----------
+echo "--- Create QMI StorageClass from NFS location"
+hostname=`hostname`
+storageClassName="qmistorage"
+helm upgrade --install $storageClassName stable/nfs-client-provisioner --set nfs.server=$hostname --set nfs.path=/data/k8s --set storageClass.name=$storageClassName
 
 echo "--- Create Persistent Volume Claims for storage"
 kubectl apply -f /vagrant/files/pvc-mongo.yaml
